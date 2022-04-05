@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+:root{
+    --warna-utama: #6BB36B;
+    --warna-kedua: #96B36B;
+    --warna-ketiga: #D6FF99;
+    --warna-heading: #fff;
+}
+
+body{
+    background-color: var(--warna-ketiga);
+}
+
+.header{
+    width: 100%;
+    height: 45px;
+    background-color: var(--warna-kedua);
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.judul-utama h1{
+    float: left;
+    font-size: 30px;
+    margin-left: 20px;
+    letter-spacing: 5px;
+    color: var(--warna-heading);
+}
+
+.icons{
+    float: right;
+}
+
+.icons a{
+    float: left;
+    list-style: none;
+    margin-right: 20px;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--warna-ketiga);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--warna-kedua);
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* flex-direction: column; */
+    padding-bottom: 20px;
+}
+
+.card-me{
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: var(--warna-utama);
+    border-radius: 10px;
+    margin: 5px;
+    margin-top: 20px;
+}
+
+.w100{
+    width: 100%;
+}
+
+.w50{
+    width: 50%;
+}
+
+.hasilcek{
+    display: flex;
+}
+
+.card-me-head{
+    display: block;
+    height: auto;
+    background-color: var(--warna-kedua);
+    border-radius: 8px 8px 10px 10px;
+    padding: 10px;
+    color: var(--warna-heading);
+}
+
+.riwayat{
+    height: auto;
+    background-color: var(--warna-ketiga);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.riwayat-button{
+    text-decoration: none;
+    color: #000;
+}
+
+.baris{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.kolom{
+    margin-right: 40px;
+    margin-top: 5px;
+}
+
+form{
+    padding: 10px;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input,select,option{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.mb10{
+    margin-bottom: 10px;
+}
+
+.mr30{
+    margin-right: 30px;
+}
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: var(--warna-kedua);
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons-footer a{
+    float: left;
+    list-style: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 3px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--warna-ketiga);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-decoration: none;
+    color: var(--warna-kedua);
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+    }
+    .judul-utama{
+        text-align: center;
+    }
+    .icons{
+        display: none;
+    }
+    .container{
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .card-me{
+        width: 100%;
+    }
+    .card-me-head{
+        border-radius: 8px 8px 0px 0px;
+    }
+    .footer{
+        display: block;
+    }
+    .riwayat{
+        border-radius: 10px;
+    }
+    .hasilcek{
+        display: block;
+    }
+    .riwayathasil{
+        width: auto;
+    }
+}
+
+.flexbox{
+    display: flex;
+}
+
+.card-makanan{
+    background-color: var(--warna-kedua);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    height: auto;
+    float: left;
+    width: 30%;
+}
+
+@media screen and (max-width: 768px){
+    .card-makanan{
+        width: 90%;
+    }
+
+    .baris{
+        display: block;
+    }
+}
+
+.card-makanan .gambar{
+    width: 134px;
+    height: 100px;
+    background-color: grey;
+    float: left;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.deskripsi-makanan{
+    /* float: left; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
