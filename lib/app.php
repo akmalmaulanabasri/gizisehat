@@ -26,19 +26,6 @@ if(isset($_POST['hitung']))
 
     $id_user = $user_id;
 
-    $insert = "INSERT INTO `riwayat_cek` (`umur`, `bb`, `tb`, `kelamin`, `act1`, `act2`, `act3`, `stres`, `nama`, `tanggal`, `jam`, `id_user`) VALUES ('$u', '$bb', '$tb', '$kelamin', '$act1', '$act2', '$act3', '$stres', '$nama', '$tanggal', '$jam' , '$id_user')";
-    $query = mysqli_query($conn, $insert);
-    if(!$query)
-    {
-        die(var_dump(mysqli_error($conn)));
-    }else{
-        $id = "SELECT id FROM riwayat_cek ORDER BY id DESC LIMIT 1";
-        $cek = mysqli_query($conn, $id);
-        $row = mysqli_fetch_assoc($cek);
-        $id = $row['id'];
-        header("Location: hasil.php?id=$id");
-    }
-
     $act = $act1 + $act2 + $act3;
     $act = $act / 3;
 
@@ -101,6 +88,19 @@ if(isset($_POST['hitung']))
     {
         // echo "test";
     }
+
+    $insert = "INSERT INTO `riwayat_cek` (`umur`, `bb`, `tb`, `kelamin`, `act1`, `act2`, `act3`, `stres`, `kalori`,`nama`, `tanggal`, `jam`, `id_user`) VALUES ('$u', '$bb', '$tb', '$kelamin', '$act1', '$act2', '$act3', '$stres', '$kalori', '$nama', '$tanggal', '$jam' , '$id_user')";
+    $query = mysqli_query($conn, $insert);
+    if(!$query)
+    {
+        die(var_dump(mysqli_error($conn)));
+    }else{
+        $id = "SELECT id FROM riwayat_cek ORDER BY id DESC LIMIT 1";
+        $cek = mysqli_query($conn, $id);
+        $row = mysqli_fetch_assoc($cek);
+        $id = $row['id'];
+        header("Location: hasil.php?id=$id");
+    }
 }else
 
 if(isset($_GET['id'])){
@@ -148,6 +148,13 @@ if(isset($_GET['id'])){
     $faktoraktifitas = $aktifitas[$act];
     $faktorstress = $stress[$stres];
     $kalori = $bmr * $faktoraktifitas * $faktorstress;
+
+    $update = "UPDATE `riwayat_cek` SET `kalori` = '$kalori' WHERE `riwayat_cek`.`id` = $id";
+    $query = mysqli_query($conn, $update);
+    if(!$query)
+    {
+        die(var_dump(mysqli_error($conn)));
+    }
     // echo $kalori . " kkal <br>";
 
     $bmi = $bb / (($tb/100) * ($tb/100));

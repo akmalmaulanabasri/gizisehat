@@ -277,3 +277,163 @@ input,select,option{
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.container-landing{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 30px;
+    padding-top: 10px;
+}
+
+.container-landing .kanan{
+    width: 50%;
+    height: auto;
+    margin: 5px;
+    margin-top: 20px;
+    padding-top: 50px;
+}
+
+.container-landing img{
+    width: 100%;
+    height: auto;
+}
+
+.container-landing .kiri{
+    width: 50%;
+    height: auto;
+    margin: 5px;
+    margin-top: 20px;
+    padding-top: 120px;
+}
+
+.container-landing .kiri a{
+    text-decoration: none;
+}
+
+.container-landing .kiri .btn{
+    width: 130px;
+    background-color: var(--warna-kedua);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    color: var(--warna-ketiga);
+    align-items: center;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.header-landing{
+    width: 100%;
+    height: 45px;
+    background-color: var(--warna-kedua);
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons-landing{
+    /* float: right; */
+}
+
+.icons-landing a{
+    float: left;
+    list-style: none;
+    margin-right: 50px;
+    padding: 5px;
+    height: 35px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-decoration: none;
+    color: var(--warna-ketiga);
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-landing .judul-utama{
+    display: none;
+}
+
+.container-fitur{
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.container-fitur h1{
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.container-fitur .cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-fitur .card{
+    background-color: var(--warna-kedua);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    height: auto;
+    float: left;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px){
+    .icons-landing{
+        display: none;
+    }
+    .header-landing .judul-utama{
+        display: block;
+    }
+    .container-landing{
+        flex-direction: column-reverse;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .container-landing .kanan{
+        width: 100%;
+        height: auto;
+        margin: 5px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-landing img{
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+    .container-landing .kiri{
+        width: 100%;
+        height: auto;
+        margin: 5px;
+        margin-top: 20px;
+        text-align: center;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container-fitur{
+        padding: 10px;
+    }
+}

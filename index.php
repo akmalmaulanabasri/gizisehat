@@ -2,10 +2,18 @@
 if(isset($_COOKIE['user_id'])){
     $user_id = $_COOKIE['user_id'];
 }else{
-    $user_id = sha1(uniqid());
-    setcookie('user_id', $user_id, time()+3600*24*30);
-    $user_id = $_COOKIE['user_id'];
-    header("Location: index.php");
+    header("Location: landing");
+}
+
+if(isset($_GET['url'])){
+    if(isset($_COOKIE['user_id'])){
+        header("Location: index.php");
+    }else{
+        $user_id = sha1(uniqid());
+        setcookie('user_id', $user_id, time()+3600*24*30);
+        $user_id = $_COOKIE['user_id'];
+        header("Location: index.php");
+    }
 }
     include 'lib/database.php';
     include 'lib/header.php';
