@@ -432,7 +432,9 @@ input,select,option{
         justify-content: center;
         flex-direction: column;
     }
-
+    .container-fitur .card{
+        font-size: 10px;
+    }
     .container-fitur{
         padding: 10px;
     }
