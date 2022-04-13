@@ -47,11 +47,11 @@
                         <p>Tinggi & Berat Badan Ideal Bedasarkan Umur</p>
                     <div class="baris">
                         <div class="kolom">
-                            <p>Jenis Kelamin : LK</p>
-                            <p>Berat Badan : 55</p>
+                            <p>Jenis Kelamin : <?php echo $kelamin?></p>
+                            <!-- <p>Berat Badan : 55</p> -->
                         </div>
                         <div class="kolom">
-                            <p>Kebutuhan : 2200 Kalori</p>
+                            <!-- <p>Kebutuhan : 2200 Kalori</p> -->
                             <p>Indeks Masa Tubuh = <?= number_format($bmi)?></p>
                         </div>
                     </div>

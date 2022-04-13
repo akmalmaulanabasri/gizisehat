@@ -29,7 +29,7 @@ $row = mysqli_num_rows($cek);
                 <p>Umur = <?= $row['umur']?> Tahun</p>
             </div>
             <div class="kolom">
-                <p>Kebutuhan Kalori : 2033 Kalori</p>
+                <p>Kebutuhan Kalori : <?= $row['kalori']?> Kalori</p>
                 <p><?= $row['nama']?></p>
             </div>
         </div>

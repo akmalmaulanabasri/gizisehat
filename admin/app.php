@@ -145,6 +145,13 @@ if(isset($_GET['id'])){
     $faktoraktifitas = $aktifitas[$act];
     $faktorstress = $stress[$stres];
     $kalori = $bmr * $faktoraktifitas * $faktorstress;
+
+    $update = "UPDATE `riwayat_cek` SET `kalori` = '$kalori' WHERE `riwayat_cek`.`id` = $id";
+    $query = mysqli_query($conn, $update);
+    if(!$query)
+    {
+        die(var_dump(mysqli_error($conn)));
+    }
     // echo $kalori . " kkal <br>";
 
     $bmi = $bb / (($tb/100) * ($tb/100));
