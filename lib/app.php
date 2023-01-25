@@ -126,7 +126,7 @@ if(isset($_GET['id'])){
     $act = $act1 + $act2 + $act3;
     $act = $act / 3;
 
-    if($kelamin == "lk")
+    if($kelamin == "Laki-Laki")
     {
         $bmr = 66;
         $bmr += 13.7 * $bb;
@@ -135,7 +135,7 @@ if(isset($_GET['id'])){
         $bmr = $bmr - $bmr1;
         $kelamin = "Laki-Laki";
     }
-    else if ($kelamin == "pr")
+    else if ($kelamin == "Perempuan")
     {
         $bmr = 655;
         $bmr += 9.56 * $bb;

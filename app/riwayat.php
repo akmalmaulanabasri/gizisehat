@@ -5,11 +5,11 @@ $cek = mysqli_query($conn, $riwayat);
 $row = mysqli_num_rows($cek);
     while($row = mysqli_fetch_assoc($cek)){
 
-        if($row['kelamin'] == "lk")
+        if($row['kelamin'] == "Laki-Laki")
     {
         $kelamin = "Laki-Laki";
     }
-    else if ($row['kelamin'] == "pr")
+    else if ($row['kelamin'] == "Perempuan")
     {
         $kelamin = "Perempuan";
     }
